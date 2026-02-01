@@ -4,6 +4,7 @@ import Dos from './assets/2Curso.jpg'
 import Tres from './assets/3Curso.jpg'
 import Cuatro from './assets/4Curso.jpg'
 import Cinco from './assets/5Curso.jpg'
+import Seis from './assets/6Curso.png'
 
 
 
@@ -13,6 +14,8 @@ function App() {
   const [show1, setShow1] = useState(false)
   const [show2, setShow2] = useState(false)
   const [show3, setShow3] = useState(false)
+  const [show4, setShow4] = useState(false)
+  const [show5, setShow5] = useState(false)
 
   const [data, setData] = useState([
     {
@@ -134,7 +137,187 @@ function App() {
         </div>
 
       </>
-    }
+    },
+    {
+      titulo: "Conexión entre plataformas", link: "https://www.youtube.com/embed/SsYjXBKg-dE?si=IXfO9kHXPdVhzefO",
+      descripcion: <><p>En este video te explicamos cómo conectar las diferentes plataformas entre sí para que puedan comunicarse entre ellas.</p></>
+    },
+    {
+      titulo: "Conexión entre Kommo y N8N", link: "https://res.cloudinary.com/dlyoighih/video/upload/v1747970285/samples/elephants.mp4",
+      descripcion: <>
+        <p>En esta clase vamos a conectar Kommo con n8n para que todo el sistema quede integrado. Te vamos a proporcionar un archivo JSON preconfigurado con el flujo de automatización, que podrás descargar e importar directamente en tu cuenta de n8n.<br />
+
+          Qué vamos a hacer en esta clase: </p>
+        <div className='pl-8'>
+          <li>Descargar el archivo JSON con el flujo completo.</li>
+          <li>Importarlo en tu cuenta de n8n.</li>
+          <li>Conectar Kommo con n8n para que ambas plataformas trabajen juntas.</li>
+        </div> <br />
+
+        <p>📌 Objetivo final:</p>
+        <p>Dejar tu entorno preparado y con la integración activa, listo para empezar a trabajar con el flujo automatizado configurado durante el curso.</p><br />
+        <p className='font-bold'>Kommo credentials</p>
+        <p>Authorization URL: https://www.kommo.com/oauth</p>
+        <p>Access Token URL: https://subdomain.kommo.com/oauth2/access_token</p>
+        <p>Auth URI Query Parameters: grant_type=authorization_code</p><br />
+        <p className='font-bold text-center text-[25px]'>Descarga el json acá ⬇️⬇️⬇️</p>
+        <p className='text-center'>
+          <a href="https://drive.google.com/file/d/1kzpHh53kXpIh2oEbHwEQ44pT23wYNbI0/view?usp=sharing" target="_blank" rel="noopener noreferrer" className='hover:text-blue-500 cursor-pointer hover:underline'>
+            https://drive.google.com/file/d/1kzpHh53kXpIh2oEbHwEQ44pT23wYNbI0/view?usp=sharing
+          </a>
+        </p><br />
+        <p className='text-center p-2 bg-[#D8F999] border-t border-t-[#62748E] border-b border-b-[#62748E]'>💡Importante: los webhooks que agregamos en Kommo, tanto el de test como el de producción, suelen demorar en enviar datos a N8N cuando lo instalamos por PRIMERA VEZ,
+          entonces podemos estar haciendo pruebas y el webhook no funciona, recomendamos esperar unos 40 minutos desde que agregamos la URL del webhook a Kommo para hacer las
+          primeras pruebas.</p><br />
+        <p>
+          Acceso plataforma de Open AI (tokens):
+          <a href="https://platform.openai.com/" target="_blank" rel="noopener noreferrer" className='ml-2 hover:text-blue-500 cursor-pointer hover:underline'>
+            https://platform.openai.com/
+          </a>
+        </p>
+      </>
+    },
+    {
+      titulo: "Copias de seguridad", imagenes: [
+        { titulo: "Imagen de referencia", link: Seis }],
+      descripcion: <>
+        <p>
+          Guardá tus workflows. No confíes en la suerte. <br />
+
+          N8N es poderoso, pero no es infalible: una actualización, un bug o un error humano puede romper un flujo sin aviso. <br />
+          Por eso siempre descargá una copia en JSON desde el menú de cada workflow. <br />
+
+          Un backup te salva de:
+        </p> <br />
+        <div className='pl-8'>
+          <li>Perder automatizaciones completas.</li>
+          <li>Tener que reconstruir flujos desde cero.</li>
+          <li>Quedarte sin sistema por un cambio de versión</li>
+          <li>Romper procesos críticos en producción</li>
+        </div> <br />
+        <p>Cómo descargar tu workflow:</p> <br />
+        <div className='pl-8'>
+          <li>Hacé clic en los tres puntos (⋯) arriba a la derecha del editor.</li>
+          <li>Seleccioná “Download” en el menú.</li>
+          <li>Guardá el archivo JSON en tu carpeta de backups (Drive, Dropbox, o donde manejes tus versiones).</li>
+        </div> <br />
+        <p>
+          Hacé tu biblioteca de respaldos y mantené tu sistema seguro. <br />
+          Un clic hoy te evita un dolor de cabeza mañana.
+        </p> <br />
+      </>
+    },
+    {
+      titulo: "Primerso pasos, pruebas y errores frecuentes", link: "https://www.youtube.com/embed/mSMBTAGy1_w?si=uQbKQXrbKktu9eeC",
+      descripcion: <>
+        <p>
+          💡Importante: si el interruptor para poner el modo producción no se ve como en el video es porque tu versión es la 2.0, podrás ver las diferencias con la versión 1.0
+          (es la que se grabó el video) en este link:
+          <a href="http://" target="_blank" rel="noopener noreferrer" className='ml-2 font-bold text-blue-500 cursor-pointer hover:underline'>
+            clic acá
+          </a>
+        </p>
+      </>
+    },
+    {
+      titulo: "Pruebas de funcionamiento en N8N", link: "https://www.youtube.com/embed/u_L-jspipS4?si=ZouxLBcIc8NHNcGQ",
+      descripcion: <>
+        <p className='p-2 bg-[#D8F999] border-t border-t-[#62748E] border-b border-b-[#62748E]'>
+          💡Importante: Para frenar la IA, crear la etiqueta con el texto que diga "stop_ai", NO "stop_ia". <br />
+          💡Importante: sobre el nodo de transcripción de audio, más adelante podrás ver esta implementación. <br />
+          💡Importante: si el interruptor para poner el modo producción no se ve como en el video es porque tu versión es la 2.0,
+          podrás ver las diferencias con la versión 1.0 (es la que se grabó el video) en este link:
+          <a href="http://" target="_blank" rel="noopener noreferrer" className='ml-2 font-bold text-blue-500 cursor-pointer hover:underline'>
+            clic acá
+          </a>
+        </p> <br />
+        <p>
+          Antes de crear un agente de IA, es fundamental redactar un <span className='font-bold'>prompt claro y estructurado.</span> <br />
+
+          El prompt funciona como el “manual de uso” del agente: le indica qué rol cumple, cuál es su objetivo, cómo debe comunicarse y hasta dónde puede llegar en la conversación. <br />
+
+          Si el prompt está mal definido, el agente puede responder de manera confusa, inventar información o no guiar bien al usuario.
+          En cambio, si lo estructurás con las siguientes secciones, vas a tener un agente <span className='font-bold'>coherente, profesional y alineado con tu negocio.</span>
+        </p> <br />
+
+        <p className='font-bold text-center text-[25px]'>Descarga el prompt acá ⬇️⬇️⬇️</p>
+        <p className='text-center'>
+          <a href="https://docs.google.com/document/d/1spOaHqyGvCJZot3fL7JKPCSwr2LS2L9cQw4E_DBBLis/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className='hover:text-blue-500 cursor-pointer hover:underline'>
+            https://docs.google.com/document/d/1spOaHqyGvCJZot3fL7JKPCSwr2LS2L9cQw4E_DBBLis/edit?usp=sharing
+          </a>
+        </p>
+
+      </>
+    },
+    {
+      titulo: "Conecta el agente a OpenAI", link: "https://www.youtube.com/embed/2hnpqyExf1I?si=hCyWj8nFrkhuT8Kq",
+      descripcion: <><p>En este video te explicamos cómo conectar el agente a OpenAI.</p> <br />
+        <p className=''>
+          Acceso plataforma de Open AI (tokens):
+          <a href="https://platform.openai.com/" target="_blank" rel="noopener noreferrer" className='ml-2 hover:text-blue-500 cursor-pointer hover:underline'>
+            https://platform.openai.com/
+          </a>
+        </p>
+      </>
+    },
+    {
+      titulo: "Conexiones con Google", link: "https://www.youtube.com/embed/sYRF0_gjLmI?si=jzFqi61hMNCBbERr",
+      descripcion: <>
+        <p>En este video te explicamos cómo hacer las conexiones con las diferentes plataformas de Google.</p> <br />
+        <p>
+          Acceso:
+          <a href="https://cloud.google.com/apis" target="_blank" rel="noopener noreferrer" className='ml-2 hover:text-blue-500 cursor-pointer hover:underline'>
+            https://cloud.google.com/apis
+          </a>
+        </p>
+      </>
+    },
+    {
+      titulo: "Conexión con base de datos en Supabase", link: "https://www.youtube.com/embed/HIecMl_shKM?si=tF4pOnOUbDKMMZZQ",
+      descripcion: <><p>En este video te explicamos cómo hacer la conexión con la base de datos en Supabase.</p> <br />
+        <p>
+          Supabase:
+          <a href="https://supabase.com/" target="_blank" rel="noopener noreferrer" className='ml-2 hover:text-blue-500 cursor-pointer hover:underline'>
+            https://supabase.com/
+          </a>
+        </p>
+      </>
+
+    },
+    {
+      titulo: "Costos", link: "https://www.youtube.com/embed/lGjG5yT_r9E?si=BsGQ-XNLHxXOd7B0",
+      descripcion: <>
+        <p>
+          💼 Costos fijos mensuales:
+        </p> <br />
+        <p>
+          Kommo CRM:
+          <a href="https://www.kommo.com/es/precios/comparar-planes/" target="_blank" rel="noopener noreferrer" className='ml-2 hover:text-blue-500 cursor-pointer hover:underline'>
+            https://www.kommo.com/es/precios/comparar-planes/
+          </a> <br />
+          N8N:
+          <a href="https://n8n.io/pricing/" target="_blank" rel="noopener noreferrer" className='ml-2 hover:text-blue-500 cursor-pointer hover:underline'>
+            https://n8n.io/pricing/
+          </a> <br />
+          VPS con descuento del 20%:
+          <a href="https://www.hostinger.com.ar/cart?product=vps%3Avps_kvm_2&period=12&referral_type=cart_link&REFERRALCODE=2EXECCOMMP5J&referral_id=019c14da-374c-7136-8c8d-c85217591475" target="_blank" rel="noopener noreferrer" className='ml-2 hover:text-blue-500 cursor-pointer hover:underline'>
+            https://www.hostinger.com.ar/cart?product=vps%3Avps_kvm_2&period=12&referral_type=cart_link&REFERRALCODE=2EXECCOMMP5J&referral_id=019c14da-374c-7136-8c8d-c85217591475
+          </a> <br /> <br />
+
+          ⚙️ Costos variables: <br />
+          WhatsApp API:
+          <a href="https://business.whatsapp.com/products/platform-pricing?lang=es_LA" target="_blank" rel="noopener noreferrer" className='ml-2 hover:text-blue-500 cursor-pointer hover:underline'>
+            https://business.whatsapp.com/products/platform-pricing?lang=es_LA
+          </a> <br />
+          Tokens de OpenAI:
+          <a href="https://openai.com/es-ES/api/pricing/" target="_blank" rel="noopener noreferrer" className='ml-2 hover:text-blue-500 cursor-pointer hover:underline'>
+            https://openai.com/es-ES/api/pricing/
+          </a> <br />
+        </p>
+      </>
+
+    },
+
   ])
 
   const [index, setIndex] = useState(0)
@@ -192,6 +375,43 @@ function App() {
               </div>
 
 
+
+              <div className={` flex flex-col p-2 border border-black ${show4 ? "h-[340px]" : "h-[42px]"} overflow-hidden transition-all duration-400`}>
+                <div className='flex flex-row mb-2 items-center gap-2 hover:text-blue-500 cursor-pointer' onClick={() => setShow4(!show4)}>
+                  <i className={`${show4 ? "fa-solid fa-angle-up" : "fa-solid fa-angle-down"} transition-all duration-300`}></i>
+                  <p className='text-[18px] font-bold text-[#4E4E55]'>Conexiones de canales y plataformas</p>
+                </div>
+
+                <div className='flex flex-col gap-2'>
+                  <button onClick={() => setIndex(7)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Conexión entre plataformas</button>
+                  <button onClick={() => setIndex(8)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Conexión entre Kommo y N8N</button>
+                  <button onClick={() => setIndex(9)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Copias de seguridad</button>
+                  <button onClick={() => setIndex(10)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Primerso pasos, pruebas y errores frecuentes</button>
+                  <button onClick={() => setIndex(11)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Pruebas de funcionamiento en N8N</button>
+                  <button onClick={() => setIndex(12)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Conecta el agente a OpenAI</button>
+                  <button onClick={() => setIndex(13)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Conexiones con Google</button>
+                  <button onClick={() => setIndex(14)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Conexión con base de datos en Supabase</button>
+                </div>
+              </div>
+
+
+
+              <div className={` flex flex-col p-2 border border-black ${show5 ? "h-[240px]" : "h-[42px]"} overflow-hidden transition-all duration-400`}>
+                <div className='flex flex-row mb-2 items-center gap-2 hover:text-blue-500 cursor-pointer' onClick={() => setShow5(!show5)}>
+                  <i className={`${show5 ? "fa-solid fa-angle-up" : "fa-solid fa-angle-down"} transition-all duration-300`}></i>
+                  <p className='text-[18px] font-bold text-[#4E4E55]'>Comportamiento y gestión del agente de IA</p>
+                </div>
+
+                <div className='flex flex-col gap-2'>
+                  <button onClick={() => setIndex(15)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Costos</button>
+                  <button onClick={() => setIndex(16)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Movimiento de columna automático dentro del CRM</button>
+                  <button onClick={() => setIndex(17)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Transcripción de audio a texto</button>
+                  <button onClick={() => setIndex(18)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Reset de memoria</button>
+                  <button onClick={() => setIndex(19)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Que tu agente pueda rebatir objeciones</button>
+                </div>
+              </div>
+
+
             </div>
             {/* ----------------------------------------------------------- GRUPOS DE LINKS ------------------------------------------------------- */}
 
@@ -206,6 +426,9 @@ function App() {
             <iframe className={`${data[index].link2 ? "block" : "hidden"}`} width="90%" height="600" src={`${data[index].link2}`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             {/* <p className='text-center text-[20px] font-semibold text-[#4E4E55] my-3'>{data[index].descripcion}</p> */}
 
+
+
+
             <div className='text-[20px] font-semibold text-[#4E4E55] my-3 w-[95%] text-wrap overflow-hidden'>
               {data[index].descripcion}
             </div>
@@ -214,7 +437,7 @@ function App() {
               return (
                 <>
                   <p className='text-[20px] font-semibold text-[black] my-3'>{imagen.titulo}</p>
-                  <img className='w-[80%] h-[600px] object-cover' key={index} src={imagen.link} alt={imagen.titulo} />
+                  <img className='w-[90%] h-[600px] object-contain' key={index} src={imagen.link} alt={imagen.titulo} />
                 </>
               )
             })}
