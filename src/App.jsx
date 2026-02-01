@@ -88,10 +88,10 @@ function App() {
         <p>Acceso a Hostinger con <span className='font-bold'>20% de descuento</span>: <a className='text-blue-500 hover:underline cursor-pointer' target="_blank" href="https://hostinger.com.ar?REFERRALCODE=2EXECCOMMP5J">
           https://hostinger.com.ar?REFERRALCODE=2EXECCOMMP5J
         </a></p><br />
-        <p>Acceso a plan recomendado (KVM 2) por 1 año, con <span className='font-bold'>20% de descuento</span>: 
-        <a className='text-blue-500 hover:underline cursor-pointer' target="_blank" href="https://www.hostinger.com.ar/cart?product=vps%3Avps_kvm_2&period=12&referral_type=cart_link&REFERRALCODE=2EXECCOMMP5J&referral_id=019c14da-374c-7136-8c8d-c85217591475">
-          https://www.hostinger.com.ar/cart?product=vps%3Avps_kvm_2&period=12&referral_type=cart_link&REFERRALCODE=2EXECCOMMP5J&referral_id=019c14da-374c-7136-8c8d-c85217591475
-        </a></p>
+        <p>Acceso a plan recomendado (KVM 2) por 1 año, con <span className='font-bold'>20% de descuento</span>:
+          <a className='text-blue-500 hover:underline cursor-pointer' target="_blank" href="https://www.hostinger.com.ar/cart?product=vps%3Avps_kvm_2&period=12&referral_type=cart_link&REFERRALCODE=2EXECCOMMP5J&referral_id=019c14da-374c-7136-8c8d-c85217591475">
+            https://www.hostinger.com.ar/cart?product=vps%3Avps_kvm_2&period=12&referral_type=cart_link&REFERRALCODE=2EXECCOMMP5J&referral_id=019c14da-374c-7136-8c8d-c85217591475
+          </a></p>
         <p className='font-bold text-center underline'>🧩 Sobre las dos formas de usar n8n</p><br />
         <p>N8N puede utilizarse de dos maneras:</p><br />
         <p className='font-bold'>1. Usando el servidor oficial de n8n (n8n cloud)</p>
