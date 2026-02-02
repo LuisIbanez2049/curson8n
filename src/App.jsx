@@ -317,6 +317,42 @@ function App() {
       </>
 
     },
+    {
+      titulo: "Movimiento de columna automático dentro del CRM", link: "https://www.youtube.com/embed/81WSX0S-poI?si=XZTyMlwppCyv4eMS",
+      descripcion: <><p>En este video te explicamos cómo hacer el movimiento de columna automático dentro del CRM.</p> <br />
+        <p className='font-bold text-center text-[25px]'>Descarga el json acá ⬇️⬇️⬇️</p>
+        <p className='text-center'>
+          <a href="https://drive.google.com/file/d/1TLt_IUmWT_bYwj00JnmIpd5deaISRHNf/view?usp=sharing" target="_blank" rel="noopener noreferrer" className='hover:text-blue-500 cursor-pointer hover:underline'>
+            https://drive.google.com/file/d/1TLt_IUmWT_bYwj00JnmIpd5deaISRHNf/view?usp=sharing
+          </a>
+        </p>
+      </>
+    },
+    {
+      titulo: "Transcripción de audio a texto", link: "https://www.youtube.com/embed/81WSX0S-poI?si=XZTyMlwppCyv4eMS",
+      descripcion: <><p>En este video te explicamos cómo hacer la transcripción de audio a texto.</p> <br />
+        <p className='font-bold text-center text-[25px]'>Descarga el json acá ⬇️⬇️⬇️</p>
+        <p className='text-center'>
+          <a href="https://drive.google.com/file/d/1z2oftlvpEUbDBzQE8Qc8foSEccMuKhIw/view?usp=sharing" target="_blank" rel="noopener noreferrer" className='hover:text-blue-500 cursor-pointer hover:underline'>
+            https://drive.google.com/file/d/1z2oftlvpEUbDBzQE8Qc8foSEccMuKhIw/view?usp=sharing
+          </a>
+        </p>
+      </>
+    },
+    {
+      titulo: "Reset de memoria", link: "https://www.youtube.com/embed/rAvgX4zwu9I?si=dOvNKZvIRA6M3Kqa",
+      descripcion: <><p>En este video te explicamos cómo resetear la memoria del asistente virtual.</p></>
+    },
+    {
+      titulo: "Que tu agenta pueda rebatir objeciones", link: "https://www.youtube.com/embed/uManmwFOvr4?si=0RwHFwiDe_GJdxIF",
+      descripcion: <><p>En este video te explicamos cómo hacer que tu agente pueda rebatir objeciones.</p> <br />
+      <p> <span className='font-bold'>Instrucciones para el prompt:</span>  <br /> - Si el usuario plantea una objeción (ej. precio, tiempo, confianza, necesidad, técnica, formato), primero buscá la objeción en la 
+        base de datos `objeciones_respuestas` y respondé con la respuesta correspondiente. <br />
+        - Si no encontrás la objeción en la base, usá un fallback: respondé con empatía, reforzá el valor del (producto/servicio) y, si hace falta, 
+        derivá a un asesor humano.
+      </p>
+      </>
+    },
 
   ])
 
