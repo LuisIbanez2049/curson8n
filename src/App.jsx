@@ -16,6 +16,7 @@ function App() {
   const [show3, setShow3] = useState(false)
   const [show4, setShow4] = useState(false)
   const [show5, setShow5] = useState(false)
+  const [show6, setShow6] = useState(false)
 
   const [data, setData] = useState([
     {
@@ -353,6 +354,76 @@ function App() {
       </p>
       </>
     },
+    {
+      titulo: "Sheets como base de datos de productos", link: "https://www.youtube.com/embed/usX5NEerQlw?si=AhjZSnlGEPW2aBGX",
+      descripcion: <><p>En este video te explicamos cómo usar Sheets como base de datos de productos.</p> <br />
+        <p className='font-bold text-center text-[25px]'>Prompt para venta de celulares ⬇️⬇️</p>
+        <p className='text-center'>
+          <a href="https://docs.google.com/document/d/1S2zl3k6hC-5ZDPmsRO89BzdJjpelp9i_IOkP_zWqomw/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className='hover:text-blue-500 cursor-pointer hover:underline'>
+            https://docs.google.com/document/d/1S2zl3k6hC-5ZDPmsRO89BzdJjpelp9i_IOkP_zWqomw/edit?usp=sharing
+          </a>
+        </p>
+      </>
+    },
+    {
+      titulo: "Cómo crear y gestionar bases de datos vectorial (RAG)", link: "https://www.youtube.com/embed/H7jxylJMfRo?si=6xRAwpxlJH-YDGo0",
+      descripcion: <><p>En este video te explicamos cómo crear y gestionar bases de datos vectorial (RAG) para tu CRM.</p> <br />
+        <p className='font-bold text-center text-[25px]'>Prompt utilizado ⬇️⬇️</p>
+        <p className='text-center'>
+          <a href="https://docs.google.com/document/d/1botLflXbFmOxjVr5wpc806HWYUuPTSYbqBOaySavh-s/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className='hover:text-blue-500 cursor-pointer hover:underline'>
+            https://docs.google.com/document/d/1botLflXbFmOxjVr5wpc806HWYUuPTSYbqBOaySavh-s/edit?usp=sharing
+          </a>
+        </p>
+      </>
+    },
+    {
+      titulo: "Agendamiento automático de citas en Google Calendar ", link: "https://www.youtube.com/embed/hiDSb4uF3O4?si=pU6enlNC2BXIOPFP",
+      descripcion: <><p>En este video te explicamos cómo agendar citas automáticamente en Google Calendar.</p> <br />
+        <p className='font-bold text-center text-[25px]'>Prompt + código ⬇️⬇️</p>
+        <p className='text-center'>
+          <a href="https://docs.google.com/document/d/1XNo-vYc0sj8OwjYrree9LYD9JarzJabNO2mA5uQ5aAY/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className='hover:text-blue-500 cursor-pointer hover:underline'>
+            https://docs.google.com/document/d/1XNo-vYc0sj8OwjYrree9LYD9JarzJabNO2mA5uQ5aAY/edit?usp=sharing
+          </a>
+        </p>
+      </>
+    },
+    {
+      titulo: "Categorizador automático", link: "https://www.youtube.com/embed/mfRlZTcah_Y?si=aEtiPAQDKMqa9mOO",
+      descripcion: <><p>En este video te explicamos cómo crear un categorizador automático para tus leads.</p> <br />
+        <p className='font-bold text-center text-[25px]'>Prompt para inmobiliaria ⬇️⬇️</p>
+        <p className='text-center'>
+          <a href="https://docs.google.com/document/d/1rFHepaXd5ozit2KRwrAg4AI70Wf5cLtScQQs6Aw4mAs/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className='hover:text-blue-500 cursor-pointer hover:underline'>
+            https://docs.google.com/document/d/1rFHepaXd5ozit2KRwrAg4AI70Wf5cLtScQQs6Aw4mAs/edit?usp=sharing
+          </a>
+        </p> <br />
+
+        <p className='p-2 bg-[#D8F999] border-t border-t-[#62748E] border-b border-b-[#62748E]'>
+          <span className='font-bold'>💡Importante:</span> <br />
+          En las últimas actualizaciones el nodo de "text classiffier" empezó a generar errores y las ejecuciones se traban en este nodo, para solucionar hemos creado un tutorial que está en la 
+          sección de "dudas frecuentes de alumnos" de este curso. <br /> <br />
+          Si este nodo te da problemas, te recomiendo ir a ese video directamente y hacer el paso a paso.
+        </p> <br />
+        <a href="http://" target="_blank" rel="noopener noreferrer" className='ml-2 font-bold text-blue-500 cursor-pointer hover:underline'>
+            Clic acá para ir directo a la clase
+          </a>
+
+      </>
+    },
+    {
+      titulo: "Envío de imágenes y videos", link: "https://www.youtube.com/embed/baERMnE0REY?si=2gAPOy4Lekx1uQGN",
+      descripcion: <>
+      En este video te explicamos cómo enviar imágenes y videos a tus clientes automáticamente. <br /> <br />
+        <p>
+          Herramienta para comprimir videos:
+          <a href="https://www.freeconvert.com/es/video-compressor" target="_blank" rel="noopener noreferrer" className='ml-2 hover:text-blue-500 cursor-pointer hover:underline'>
+            https://www.freeconvert.com/es/video-compressor
+          </a> <br />
+        </p>
+      </>
+
+    },
+
+
 
   ])
 
@@ -444,6 +515,25 @@ function App() {
                   <button onClick={() => setIndex(17)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Transcripción de audio a texto</button>
                   <button onClick={() => setIndex(18)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Reset de memoria</button>
                   <button onClick={() => setIndex(19)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Que tu agente pueda rebatir objeciones</button>
+                </div>
+              </div>
+
+
+
+              <div className={` flex flex-col p-2 border border-black ${show6 ? "h-[310px]" : "h-[42px]"} overflow-hidden transition-all duration-400`}>
+                <div className='flex flex-row mb-2 items-center gap-2 hover:text-blue-500 cursor-pointer' onClick={() => setShow6(!show6)}>
+                  <i className={`${show6 ? "fa-solid fa-angle-up" : "fa-solid fa-angle-down"} transition-all duration-300`}></i>
+                  <p className='text-[18px] font-bold text-[#4E4E55]'>Funciones principales del agente de IA</p>
+                </div>
+
+                <div className='flex flex-col gap-2'>
+                  <button onClick={() => setIndex(20)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Sheets como base de datos de productos</button>
+                  <button onClick={() => setIndex(21)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Cómo crear y gestionar bases de datos vectorial (RAG)</button>
+                  <button onClick={() => setIndex(22)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Agendamiento automático de citas en Google Calendar</button>
+                  <button onClick={() => setIndex(23)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Categorizador automático</button>
+                  <button onClick={() => setIndex(24)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Envío de imágenes y videos</button>
+                  <button onClick={() => setIndex(25)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Cómo hacer para que el agente reconozca imágenes</button>
+                  <button onClick={() => setIndex(26)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Instalación de Postgres para memoria a largo plazo</button>
                 </div>
               </div>
 
