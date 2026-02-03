@@ -17,6 +17,8 @@ function App() {
   const [show4, setShow4] = useState(false)
   const [show5, setShow5] = useState(false)
   const [show6, setShow6] = useState(false)
+  const [show7, setShow7] = useState(false)
+  const [show8, setShow8] = useState(false)
 
   const [data, setData] = useState([
     {
@@ -347,11 +349,11 @@ function App() {
     {
       titulo: "Que tu agenta pueda rebatir objeciones", link: "https://www.youtube.com/embed/uManmwFOvr4?si=0RwHFwiDe_GJdxIF",
       descripcion: <><p>En este video te explicamos cómo hacer que tu agente pueda rebatir objeciones.</p> <br />
-      <p> <span className='font-bold'>Instrucciones para el prompt:</span>  <br /> - Si el usuario plantea una objeción (ej. precio, tiempo, confianza, necesidad, técnica, formato), primero buscá la objeción en la 
-        base de datos `objeciones_respuestas` y respondé con la respuesta correspondiente. <br />
-        - Si no encontrás la objeción en la base, usá un fallback: respondé con empatía, reforzá el valor del (producto/servicio) y, si hace falta, 
-        derivá a un asesor humano.
-      </p>
+        <p> <span className='font-bold'>Instrucciones para el prompt:</span>  <br /> - Si el usuario plantea una objeción (ej. precio, tiempo, confianza, necesidad, técnica, formato), primero buscá la objeción en la
+          base de datos `objeciones_respuestas` y respondé con la respuesta correspondiente. <br />
+          - Si no encontrás la objeción en la base, usá un fallback: respondé con empatía, reforzá el valor del (producto/servicio) y, si hace falta,
+          derivá a un asesor humano.
+        </p>
       </>
     },
     {
@@ -399,20 +401,20 @@ function App() {
 
         <p className='p-2 bg-[#D8F999] border-t border-t-[#62748E] border-b border-b-[#62748E]'>
           <span className='font-bold'>💡Importante:</span> <br />
-          En las últimas actualizaciones el nodo de "text classiffier" empezó a generar errores y las ejecuciones se traban en este nodo, para solucionar hemos creado un tutorial que está en la 
+          En las últimas actualizaciones el nodo de "text classiffier" empezó a generar errores y las ejecuciones se traban en este nodo, para solucionar hemos creado un tutorial que está en la
           sección de "dudas frecuentes de alumnos" de este curso. <br /> <br />
           Si este nodo te da problemas, te recomiendo ir a ese video directamente y hacer el paso a paso.
         </p> <br />
         <a href="http://" target="_blank" rel="noopener noreferrer" className='ml-2 font-bold text-blue-500 cursor-pointer hover:underline'>
-            Clic acá para ir directo a la clase
-          </a>
+          Clic acá para ir directo a la clase
+        </a>
 
       </>
     },
     {
       titulo: "Envío de imágenes y videos", link: "https://www.youtube.com/embed/baERMnE0REY?si=2gAPOy4Lekx1uQGN",
       descripcion: <>
-      En este video te explicamos cómo enviar imágenes y videos a tus clientes automáticamente. <br /> <br />
+        En este video te explicamos cómo enviar imágenes y videos a tus clientes automáticamente. <br /> <br />
         <p>
           Herramienta para comprimir videos:
           <a href="https://www.freeconvert.com/es/video-compressor" target="_blank" rel="noopener noreferrer" className='ml-2 hover:text-blue-500 cursor-pointer hover:underline'>
@@ -422,6 +424,88 @@ function App() {
       </>
 
     },
+    {
+      titulo: "Cómo hacer para que el agente reconozca imágenes", link: "https://www.youtube.com/embed/rZnT_YMeClw?si=G38Rg1Ofp-2rLGjv",
+      descripcion: <><p>En este video te explicamos cómo hacer para que el agente reconozca imágenes.</p> <br />
+        <p className='font-bold text-center text-[25px]'>Prompt de ejemplo ⬇️⬇️</p>
+        <p className='text-center'>
+          <a href="https://docs.google.com/document/d/1GrZWIMvYKGsp1qIkABolr4qu1yehqlt5kSnsjMfb7eU/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className='hover:text-blue-500 cursor-pointer hover:underline'>
+            https://docs.google.com/document/d/1GrZWIMvYKGsp1qIkABolr4qu1yehqlt5kSnsjMfb7eU/edit?usp=sharing
+          </a>
+        </p>
+
+      </>
+    },
+    {
+      titulo: "Instalación de Postgres para memoria a largo plazo", link: "https://www.youtube.com/embed/jVI6fKcNkHo?si=X4pAIHhwx53cqKkc",
+      descripcion: <><p>En este video te explicamos cómo hacer para que el agente reconozca imágenes.</p> <br />
+
+      </>
+    },
+    {
+      titulo: "Seguimientos automáticos", link: "https://www.youtube.com/embed/MZSm7KM-EAU?si=TOhVxGnkj0Qcm-zf", link2: "https://www.youtube.com/embed/FWacV0EWkkM?si=T7Ii9Lo9L-pQolYY",
+      descripcion: <><p>En este video aprenderás a crear un bot para que envíe seguimientos automáticos a tus clientes.</p></>
+    },
+    {
+      titulo: "Agentes diferenciados para cada canal de comunicación", link: "https://www.youtube.com/embed/BoEpcDpOPn4?si=Nf14kWoGECy-IdLv",
+      descripcion: <><p>En este video aprenderás a crear agentes diferenciados para cada canal de comunicación.</p></>
+    },
+    {
+      titulo: "Cómo crear buffer de mensajes para evitar múltiples respuestas", link: "https://www.youtube.com/embed/BoEpcDpOPn4?si=Nf14kWoGECy-IdLv",
+      descripcion: <>
+        <p>En este video aprenderás a crear un buffer de mensajes para evitar múltiples respuestas.</p> <br />
+        <p className='font-bold text-center text-[25px]'>Descarga el flujo para buffer de mensajes de esta carpeta ⬇️</p>
+        <p className='text-center'>
+          <a href="https://drive.google.com/file/d/1IPPDp2_JwYA7CBEdT2r75yiBQbCto7Qe/view?usp=sharing" target="_blank" rel="noopener noreferrer" className='hover:text-blue-500 cursor-pointer hover:underline'>
+            https://drive.google.com/file/d/1IPPDp2_JwYA7CBEdT2r75yiBQbCto7Qe/view?usp=sharing
+          </a>
+        </p>
+      </>
+    },
+    {
+      titulo: "Cómo verificar superposición para agendamientos de citas", link: "https://www.youtube.com/embed/HpJ2TJn5n0w?si=DxeGoQJrZOyi4i1L",
+      descripcion: <>
+        <p>En este video aprenderás a crear un bot para verificar superposición para agendamientos de citas. <br /> <br />
+        <span className="font-bold">Ejemplo de prompt:</span> 
+        </p> <br />
+
+        <textarea name="" id="" block className='w-full h-[330px] p-2' disabled  value={"El día de hoy es {{ $now }} , ten en cuenta a la hora de agendar" + "\n\n" + "Tarea:" + "\n" + "Tu puedes agendar citas, para agendar la cita del usuario utiliza la herramienta \"agendar cita\"." + "\n\n" + "## Agenda de Cita" + "\n" + "- Cada cita que programes tiene una duración de 1 hora." + "\n" + "- El usuario puede cancelar su cita si así lo requiere." + "\n" + "- No empalmes eventos. Si la fecha y hora del evento que quiere el usuario se empalma con otro, recomiéndale la hora más cercana." + "\n" + "- Los usuarios solo pueden agendar de lunes a viernes de 8 a 16 hs."}></textarea>
+      </>
+    },
+
+    {
+      titulo: "Sistemas multiagentes de IA (flujo descargable)", link: "https://www.youtube.com/embed/_uxs_zvW-2c?si=qQ2nUizLgBUn7Has",
+      descripcion: <>
+        <p> En este video aprenderás a crear un sistema multiagentes de IA.</p> <br />
+         <p className='font-bold text-center text-[25px]'>Descarga el json para subir y adaptar ⬇️</p>
+        <p className='text-center'>
+          <a href="https://drive.google.com/file/d/11OV76uWTqxZH3dK6nVlN_XytrZHzVcwm/view?usp=sharing" target="_blank" rel="noopener noreferrer" className='hover:text-blue-500 cursor-pointer hover:underline'>
+            https://drive.google.com/file/d/11OV76uWTqxZH3dK6nVlN_XytrZHzVcwm/view?usp=sharing
+          </a>
+        </p>
+      </>
+    },
+    {
+      titulo: "Analista de sentimientos", link: "https://www.youtube.com/embed/cPvrny5WV_E?si=PWHt8tnwjciI572C",
+      descripcion: <><p>En este video aprenderás a crear un agente IA analista de sentimientos.</p> <br />
+
+      </>
+    },
+    {
+      titulo: "Cambios en N8N 2.0", link: "https://www.youtube.com/embed/YpSBDqPZ8J8?si=dVxPET155zksktS-",
+      descripcion: <>
+        <p>
+          Si querés sabér como montar n8n en un servidor propio y mantenerlo anctualizado a la última versión dale clic al enlace que te lleva directo a la clase:
+          <button onClick={() => setIndex(6)} className='ml-2 font-bold text-blue-500 cursor-pointer hover:underline'>
+            clic acá
+          </button>
+        </p>
+      </>
+    },
+
+
+
+    
 
 
 
@@ -534,6 +618,38 @@ function App() {
                   <button onClick={() => setIndex(24)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Envío de imágenes y videos</button>
                   <button onClick={() => setIndex(25)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Cómo hacer para que el agente reconozca imágenes</button>
                   <button onClick={() => setIndex(26)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Instalación de Postgres para memoria a largo plazo</button>
+                </div>
+              </div>
+
+
+
+              <div className={` flex flex-col p-2 border border-black ${show7 ? "h-[140px]" : "h-[42px]"} overflow-hidden transition-all duration-400`}>
+                <div className='flex flex-row mb-2 items-center gap-2 hover:text-blue-500 cursor-pointer' onClick={() => setShow7(!show7)}>
+                  <i className={`${show7 ? "fa-solid fa-angle-up" : "fa-solid fa-angle-down"} transition-all duration-300`}></i>
+                  <p className='text-[18px] font-bold text-[#4E4E55]'>Automatización del proceso comercial</p>
+                </div>
+
+                <div className='flex flex-col gap-2'>
+                  <button onClick={() => setIndex(27)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Seguimientos automáticos</button>
+                  <button onClick={() => setIndex(28)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Agentes diferenciados para cada canal de comunicación</button>
+                </div>
+              </div>
+
+
+
+
+              <div className={` flex flex-col p-2 border border-black ${show8 ? "h-[260px]" : "h-[42px]"} overflow-hidden transition-all duration-400`}>
+                <div className='flex flex-row mb-2 items-center gap-2 hover:text-blue-500 cursor-pointer' onClick={() => setShow8(!show8)}>
+                  <i className={`${show8 ? "fa-solid fa-angle-up" : "fa-solid fa-angle-down"} transition-all duration-300`}></i>
+                  <p className='text-[18px] font-bold text-[#4E4E55]'>Actualizaciones</p>
+                </div>
+
+                <div className='flex flex-col gap-2'>
+                  <button onClick={() => setIndex(29)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Cómo crear buffer de mensajes para evitar múltiples respuestas</button>
+                  <button onClick={() => setIndex(30)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Cómo verificar superposición para agendamientos de citas</button>
+                  <button onClick={() => setIndex(31)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Sistemas multiagentes de IA (flujo descargable)</button>
+                  <button onClick={() => setIndex(32)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Analista de sentimientos</button>
+                  <button onClick={() => setIndex(33)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Cambios en N8N 2.0</button>
                 </div>
               </div>
 
