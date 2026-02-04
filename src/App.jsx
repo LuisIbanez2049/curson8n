@@ -19,6 +19,8 @@ function App() {
   const [show6, setShow6] = useState(false)
   const [show7, setShow7] = useState(false)
   const [show8, setShow8] = useState(false)
+  const [show9, setShow9] = useState(false)
+  const [show10, setShow10] = useState(false)
 
   const [data, setData] = useState([
     {
@@ -466,10 +468,10 @@ function App() {
       titulo: "Cómo verificar superposición para agendamientos de citas", link: "https://www.youtube.com/embed/HpJ2TJn5n0w?si=DxeGoQJrZOyi4i1L",
       descripcion: <>
         <p>En este video aprenderás a crear un bot para verificar superposición para agendamientos de citas. <br /> <br />
-        <span className="font-bold">Ejemplo de prompt:</span> 
+          <span className="font-bold">Ejemplo de prompt:</span>
         </p> <br />
 
-        <textarea name="" id="" block className='w-full h-[330px] p-2' disabled  value={"El día de hoy es {{ $now }} , ten en cuenta a la hora de agendar" + "\n\n" + "Tarea:" + "\n" + "Tu puedes agendar citas, para agendar la cita del usuario utiliza la herramienta \"agendar cita\"." + "\n\n" + "## Agenda de Cita" + "\n" + "- Cada cita que programes tiene una duración de 1 hora." + "\n" + "- El usuario puede cancelar su cita si así lo requiere." + "\n" + "- No empalmes eventos. Si la fecha y hora del evento que quiere el usuario se empalma con otro, recomiéndale la hora más cercana." + "\n" + "- Los usuarios solo pueden agendar de lunes a viernes de 8 a 16 hs."}></textarea>
+        <textarea name="" id="" block className='w-full h-[330px] p-2' disabled value={"El día de hoy es {{ $now }} , ten en cuenta a la hora de agendar" + "\n\n" + "Tarea:" + "\n" + "Tu puedes agendar citas, para agendar la cita del usuario utiliza la herramienta \"agendar cita\"." + "\n\n" + "## Agenda de Cita" + "\n" + "- Cada cita que programes tiene una duración de 1 hora." + "\n" + "- El usuario puede cancelar su cita si así lo requiere." + "\n" + "- No empalmes eventos. Si la fecha y hora del evento que quiere el usuario se empalma con otro, recomiéndale la hora más cercana." + "\n" + "- Los usuarios solo pueden agendar de lunes a viernes de 8 a 16 hs."}></textarea>
       </>
     },
 
@@ -477,7 +479,7 @@ function App() {
       titulo: "Sistemas multiagentes de IA (flujo descargable)", link: "https://www.youtube.com/embed/_uxs_zvW-2c?si=qQ2nUizLgBUn7Has",
       descripcion: <>
         <p> En este video aprenderás a crear un sistema multiagentes de IA.</p> <br />
-         <p className='font-bold text-center text-[25px]'>Descarga el json para subir y adaptar ⬇️</p>
+        <p className='font-bold text-center text-[25px]'>Descarga el json para subir y adaptar ⬇️</p>
         <p className='text-center'>
           <a href="https://drive.google.com/file/d/11OV76uWTqxZH3dK6nVlN_XytrZHzVcwm/view?usp=sharing" target="_blank" rel="noopener noreferrer" className='hover:text-blue-500 cursor-pointer hover:underline'>
             https://drive.google.com/file/d/11OV76uWTqxZH3dK6nVlN_XytrZHzVcwm/view?usp=sharing
@@ -502,10 +504,57 @@ function App() {
         </p>
       </>
     },
+    {
+      titulo: "Instalación de N8N con problemas de acceso en VPS", link: "https://www.youtube.com/embed/6H4GErSbuYM?si=RDXUcNI65ZceyzCz",
+      descripcion: <><p>En este clase vemos cómo resolber problemas de n8n dentro del VPS.</p> <br />
+
+      </>
+    },
+    {
+      titulo: "Error en clasificador de texto", link: "https://www.youtube.com/embed/F63JpkAoG_g?si=TpOBzlyehlukP-9f",
+      descripcion: <><p>En este clase vemos cómo resolber problemas en el clasificador de texto.</p> <br />
+
+      </>
+    },
+    {
+      titulo: "Personalización de mensajes", link: "https://www.youtube.com/embed/NIRdz4q8VPI?si=w19hpyoxJrU0Dsxe",
+      descripcion: <><p>En este clase vemos cómo personalizar los mensajes de n8n.</p> <br />
+
+      </>
+    },
+    {
+      titulo: "Cómo crear una request desde la documentación de Kommo - Disparo de bot (clase avanzada)", link: "https://www.youtube.com/embed/9DaIGGQqiNo?si=D0LL6Dxx5hPj4ctj",
+      descripcion: <>
+        <p>En este video te explicamos cómo crear una request desde la documentación de Kommo - Disparo de bot (clase avanzada).</p> <br /> <br />
+        <p>
+          Documentación de Kommo:
+          <a href="https://developers.kommo.com/docs/kommo-for-developers" target="_blank" rel="noopener noreferrer" className='ml-2 hover:text-blue-500 cursor-pointer hover:underline'>
+            https://developers.kommo.com/docs/kommo-for-developers
+          </a> <br />
+        </p>
+      </>
+
+    },
+    {
+      titulo: "MVP flujo base para ofrecer consultorías (flujo descargable)", link: "https://www.youtube.com/embed/bGL3gPwHVSI?si=1qn6Ac8cn18p1Cii",
+      descripcion: <>
+        <p> En este video aprenderás a crear un MVP flujo base para ofrecer consultorías (flujo descargable).</p> <br />
+        <p className='font-bold text-center text-[25px]'>Descarga el json ⬇️⬇️</p>
+        <p className='text-center'>
+          <a href="https://drive.google.com/file/d/1PDTlgOs3TDprERNJjfgSgr1jOTpTZPUA/view?usp=sharing" target="_blank" rel="noopener noreferrer" className='hover:text-blue-500 cursor-pointer hover:underline'>
+            https://drive.google.com/file/d/1PDTlgOs3TDprERNJjfgSgr1jOTpTZPUA/view?usp=sharing
+          </a>
+        </p>
+      </>
+    },
+    {
+      titulo: "Derivación automática para cada asesor comercial", link: "https://www.youtube.com/embed/txiuyICirfU?si=6_oUqQqlI_k0Z-rH",
+      descripcion: <><p>En este video aprenderás a crear una derivación automática para cada asesor comercial.</p> <br />
+
+      </>
+    },
 
 
-
-    
 
 
 
@@ -523,7 +572,7 @@ function App() {
 
         <div id='navMasContenido' className='flex flex-row justify-around'>
 
-          <div className='relative'>
+          <div className='relative w-[30%]'>
 
 
             {/* ----------------------------------------------------------- GRUPOS DE LINKS ------------------------------------------------------- */}
@@ -654,6 +703,38 @@ function App() {
               </div>
 
 
+
+
+              <div className={` flex flex-col p-2 border border-black ${show9 ? "h-[170px]" : "h-[42px]"} overflow-hidden transition-all duration-400`}>
+                <div className='flex flex-row mb-2 items-center gap-2 hover:text-blue-500 cursor-pointer' onClick={() => setShow9(!show9)}>
+                  <i className={`${show9 ? "fa-solid fa-angle-up" : "fa-solid fa-angle-down"} transition-all duration-300`}></i>
+                  <p className='text-[18px] font-bold text-[#4E4E55]'>Dudas frecuentes de alumnos</p>
+                </div>
+
+                <div className='flex flex-col gap-2'>
+                  <button onClick={() => setIndex(34)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Instancia de N8N con problemas de acceso en VPS</button>
+                  <button onClick={() => setIndex(35)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Error en calisificador de texto</button>
+                  <button onClick={() => setIndex(36)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Personaliozación de mensajes</button>
+                </div>
+              </div>
+
+
+
+
+              <div className={` flex flex-col p-2 border border-black ${show10 ? "h-[190px]" : "h-[42px]"} overflow-hidden transition-all duration-400`}>
+                <div className='flex flex-row mb-2 items-center gap-2 hover:text-blue-500 cursor-pointer' onClick={() => setShow10(!show10)}>
+                  <i className={`${show10 ? "fa-solid fa-angle-up" : "fa-solid fa-angle-down"} transition-all duration-300`}></i>
+                  <p className='text-[18px] font-bold text-[#4E4E55]'>Bonus</p>
+                </div>
+
+                <div className='flex flex-col gap-2'>
+                  <button onClick={() => setIndex(37)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Cómo crear una request desde la documentación de Kommo - Disparo de bot (clase avanzada)</button>
+                  <button onClick={() => setIndex(38)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>MVP flujo base para ofrecer consultorías (flujo descargable)</button>
+                  <button onClick={() => setIndex(39)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Derivación automática para cada asesor comercial</button>
+                </div>
+              </div>
+
+
             </div>
             {/* ----------------------------------------------------------- GRUPOS DE LINKS ------------------------------------------------------- */}
 
@@ -662,7 +743,7 @@ function App() {
 
           </div>
 
-          <div id='contenido' className='border border-black w-[70%] rounded-lg bg-white p-4 flex flex-col gap-2 justify-center items-center'>
+          <div id='contenido' className='mb-[80px] border border-black w-[65%] rounded-lg bg-white p-4 flex flex-col gap-2 justify-center items-center'>
             <h1 className='text-center text-[30px] font-semibold text-[#4E4E55]'>{data[index].titulo}</h1>
             <iframe className={`${data[index].link ? "block" : "hidden"}`} width="90%" height="600" src={`${data[index].link}`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             <iframe className={`${data[index].link2 ? "block" : "hidden"}`} width="90%" height="600" src={`${data[index].link2}`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
