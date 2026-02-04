@@ -138,7 +138,8 @@ function App() {
 
             Si tu instancia de n8n te está dando problemas para ingresar, te recomiendo ir directamente a esa clase para ver como solucionarlo. <br /><br />
 
-            Clic acá para ir directo a la clase</p>
+            <button onClick={() => setIndex(34)} className=' text-blue-500 cursor-pointer text-start underline'>
+              Clic acá para ir directo a la clase</button></p>
         </div>
 
       </>
@@ -218,9 +219,9 @@ function App() {
         <p>
           💡Importante: si el interruptor para poner el modo producción no se ve como en el video es porque tu versión es la 2.0, podrás ver las diferencias con la versión 1.0
           (es la que se grabó el video) en este link:
-          <a href="http://" target="_blank" rel="noopener noreferrer" className='ml-2 font-bold text-blue-500 cursor-pointer hover:underline'>
-            clic acá
-          </a>
+
+          <button onClick={() => setIndex(33)} className='ml-2 text-blue-500 cursor-pointer text-start underline'>
+              Clic acá para ir directo a la clase</button>
         </p>
       </>
     },
@@ -505,7 +506,7 @@ function App() {
       </>
     },
     {
-      titulo: "Instalación de N8N con problemas de acceso en VPS", link: "https://www.youtube.com/embed/6H4GErSbuYM?si=RDXUcNI65ZceyzCz",
+      titulo: "Instancia de N8N con problemas de acceso en VPS", link: "https://www.youtube.com/embed/6H4GErSbuYM?si=RDXUcNI65ZceyzCz",
       descripcion: <><p>En este clase vemos cómo resolber problemas de n8n dentro del VPS.</p> <br />
 
       </>
@@ -519,6 +520,28 @@ function App() {
     {
       titulo: "Personalización de mensajes", link: "https://www.youtube.com/embed/NIRdz4q8VPI?si=w19hpyoxJrU0Dsxe",
       descripcion: <><p>En este clase vemos cómo personalizar los mensajes de n8n.</p> <br />
+
+      </>
+    },
+
+    // asd------------------------------------------------------------------------------------------------------------------------------------
+    {
+      titulo: "Error en nodo Get Token", link: "https://www.youtube.com/embed/JZh6o4q_BI4?si=oyqJsUqJFKU83Xyu",
+      descripcion: <><p>En este clase vemos cómo resolber problemas en el nodo Get Token.</p> <br />
+
+        <p>
+          Descarga el json desde acá (esta versión ya puede enviar saltos de línea):
+          <a href="https://drive.google.com/file/d/19TF4uBabI0GOrfGE7xPUOWF1se31j4Fe/view?usp=sharing" target="_blank" rel="noopener noreferrer" className='ml-2 hover:text-blue-500 cursor-pointer hover:underline'>
+            https://drive.google.com/file/d/19TF4uBabI0GOrfGE7xPUOWF1se31j4Fe/view?usp=sharing
+          </a>
+        </p> <br />
+
+        <p>
+          Enlace a la documentación de Kommo:
+          <a href="https://developers.kommo.com/reference/kommo-api-reference" target="_blank" rel="noopener noreferrer" className='ml-2 hover:text-blue-500 cursor-pointer hover:underline'>
+            https://developers.kommo.com/reference/kommo-api-reference
+          </a>
+        </p>
 
       </>
     },
@@ -705,7 +728,7 @@ function App() {
 
 
 
-              <div className={` flex flex-col p-2 border border-black ${show9 ? "h-[170px]" : "h-[42px]"} overflow-hidden transition-all duration-400`}>
+              <div className={` flex flex-col p-2 border border-black ${show9 ? "h-[200px]" : "h-[42px]"} overflow-hidden transition-all duration-400`}>
                 <div className='flex flex-row mb-2 items-center gap-2 hover:text-blue-500 cursor-pointer' onClick={() => setShow9(!show9)}>
                   <i className={`${show9 ? "fa-solid fa-angle-up" : "fa-solid fa-angle-down"} transition-all duration-300`}></i>
                   <p className='text-[18px] font-bold text-[#4E4E55]'>Dudas frecuentes de alumnos</p>
@@ -715,6 +738,7 @@ function App() {
                   <button onClick={() => setIndex(34)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Instancia de N8N con problemas de acceso en VPS</button>
                   <button onClick={() => setIndex(35)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Error en calisificador de texto</button>
                   <button onClick={() => setIndex(36)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Personaliozación de mensajes</button>
+                  <button onClick={() => setIndex(37)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Error en nodo Get Token</button>
                 </div>
               </div>
 
@@ -728,9 +752,9 @@ function App() {
                 </div>
 
                 <div className='flex flex-col gap-2'>
-                  <button onClick={() => setIndex(37)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Cómo crear una request desde la documentación de Kommo - Disparo de bot (clase avanzada)</button>
-                  <button onClick={() => setIndex(38)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>MVP flujo base para ofrecer consultorías (flujo descargable)</button>
-                  <button onClick={() => setIndex(39)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Derivación automática para cada asesor comercial</button>
+                  <button onClick={() => setIndex(38)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Cómo crear una request desde la documentación de Kommo - Disparo de bot (clase avanzada)</button>
+                  <button onClick={() => setIndex(39)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>MVP flujo base para ofrecer consultorías (flujo descargable)</button>
+                  <button onClick={() => setIndex(40)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Derivación automática para cada asesor comercial</button>
                 </div>
               </div>
 
