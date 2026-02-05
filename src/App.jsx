@@ -5,6 +5,7 @@ import Tres from './assets/3Curso.jpg'
 import Cuatro from './assets/4Curso.jpg'
 import Cinco from './assets/5Curso.jpg'
 import Seis from './assets/6Curso.png'
+import Logo from './assets/logo.png'
 
 
 
@@ -221,7 +222,7 @@ function App() {
           (es la que se grabó el video) en este link:
 
           <button onClick={() => setIndex(33)} className='ml-2 text-blue-500 cursor-pointer text-start underline'>
-              Clic acá para ir directo a la clase</button>
+            Clic acá para ir directo a la clase</button>
         </p>
       </>
     },
@@ -233,9 +234,8 @@ function App() {
           💡Importante: sobre el nodo de transcripción de audio, más adelante podrás ver esta implementación. <br />
           💡Importante: si el interruptor para poner el modo producción no se ve como en el video es porque tu versión es la 2.0,
           podrás ver las diferencias con la versión 1.0 (es la que se grabó el video) en este link:
-          <a href="http://" target="_blank" rel="noopener noreferrer" className='ml-2 font-bold text-blue-500 cursor-pointer hover:underline'>
-            clic acá
-          </a>
+          <button onClick={() => setIndex(33)} className='ml-2 text-blue-500 cursor-pointer text-start underline'>
+            Clic acá</button>
         </p> <br />
         <p>
           Antes de crear un agente de IA, es fundamental redactar un <span className='font-bold'>prompt claro y estructurado.</span> <br />
@@ -383,7 +383,11 @@ function App() {
     },
     {
       titulo: "Agendamiento automático de citas en Google Calendar ", link: "https://www.youtube.com/embed/hiDSb4uF3O4?si=pU6enlNC2BXIOPFP",
-      descripcion: <><p>En este video te explicamos cómo agendar citas automáticamente en Google Calendar.</p> <br />
+      descripcion: <><p>En este video te explicamos cómo agendar citas automáticamente en Google Calendar. <br /> <br />
+        Continuación de la clase para verificar que no se superpongan las citas: <button onClick={() => setIndex(30)} className=' text-blue-500 cursor-pointer text-start underline'>
+          Clic acá para ir directo a la clase</button>
+
+      </p> <br />
         <p className='font-bold text-center text-[25px]'>Prompt + código ⬇️⬇️</p>
         <p className='text-center'>
           <a href="https://docs.google.com/document/d/1XNo-vYc0sj8OwjYrree9LYD9JarzJabNO2mA5uQ5aAY/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className='hover:text-blue-500 cursor-pointer hover:underline'>
@@ -408,9 +412,8 @@ function App() {
           sección de "dudas frecuentes de alumnos" de este curso. <br /> <br />
           Si este nodo te da problemas, te recomiendo ir a ese video directamente y hacer el paso a paso.
         </p> <br />
-        <a href="http://" target="_blank" rel="noopener noreferrer" className='ml-2 font-bold text-blue-500 cursor-pointer hover:underline'>
-          Clic acá para ir directo a la clase
-        </a>
+        <button onClick={() => setIndex(35)} className='ml-2 text-blue-500 cursor-pointer text-start underline'>
+          Clic acá para ir directo a la clase</button>
 
       </>
     },
@@ -595,179 +598,187 @@ function App() {
 
         <div id='navMasContenido' className='flex flex-row justify-around'>
 
-          <div className='relative w-[30%]'>
+          <div id='nav' className='bg-white relative border border-[#D6D3D1] shadow-sm sticky top-10 w-[30%] h-[85vh] py-3 rounded-lg'>
 
 
-            {/* ----------------------------------------------------------- GRUPOS DE LINKS ------------------------------------------------------- */}
-            <div id='nav' className=' border border-red-500 sticky top-10 bg-white p-4 flex flex-col gap-2 rounded-lg'>
-
-              <div className={`border border-black p-2 ${show1 ? "h-[80px]" : "h-[42px]"} overflow-hidden transition-all duration-400`}>
-                <div className='flex flex-row mb-2 items-center gap-2 hover:text-blue-500 cursor-pointer' onClick={() => setShow1(!show1)}>
-                  <i className={`${show1 ? "fa-solid fa-angle-up" : "fa-solid fa-angle-down"} transition-all duration-300`}></i>
-                  <p className='text-[18px] font-bold text-[#4E4E55]'>Inicio</p>
-                </div>
-                <button onClick={() => setIndex(0)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Presentación</button>
-              </div>
-
-
-              <div className={` flex flex-col p-2 border border-black ${show2 ? "h-[190px]" : "h-[42px]"} overflow-hidden transition-all duration-400`}>
-                <div className='flex flex-row mb-2 items-center gap-2 hover:text-blue-500 cursor-pointer' onClick={() => setShow2(!show2)}>
-                  <i className={`${show2 ? "fa-solid fa-angle-up" : "fa-solid fa-angle-down"} transition-all duration-300`}></i>
-                  <p className='text-[18px] font-bold text-[#4E4E55]'>Implementa Kommo en tu sistema comercial</p>
-                </div>
-
-                <div className='flex flex-col gap-2'>
-                  <button onClick={() => setIndex(1)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Creación de la cuenta de Kommo</button>
-                  <button onClick={() => setIndex(2)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Conexión de canles de venta en Kommo</button>
-                  <button onClick={() => setIndex(3)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Guia de WhatsApp API</button>
-                  <button onClick={() => setIndex(4)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Cómo conectar WhatsApp Lite en Kommo (QR)</button>
-                </div>
-              </div>
-
-
-              <div className={` flex flex-col p-2 border border-black ${show3 ? "h-[140px]" : "h-[42px]"} overflow-hidden transition-all duration-400`}>
-                <div className='flex flex-row mb-2 items-center gap-2 hover:text-blue-500 cursor-pointer' onClick={() => setShow3(!show3)}>
-                  <i className={`${show3 ? "fa-solid fa-angle-up" : "fa-solid fa-angle-down"} transition-all duration-300`}></i>
-                  <p className='text-[18px] font-bold text-[#4E4E55]'>Implementa N8N en tu sistema comercial</p>
-                </div>
-
-                <div className='flex flex-col gap-2'>
-                  <button onClick={() => setIndex(5)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Creación de usuario y breve recorrido de N8N</button>
-                  <button onClick={() => setIndex(6)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Cómo montar N8N en un servidor VPS propio</button>
-                </div>
-              </div>
-
-
-
-              <div className={` flex flex-col p-2 border border-black ${show4 ? "h-[340px]" : "h-[42px]"} overflow-hidden transition-all duration-400`}>
-                <div className='flex flex-row mb-2 items-center gap-2 hover:text-blue-500 cursor-pointer' onClick={() => setShow4(!show4)}>
-                  <i className={`${show4 ? "fa-solid fa-angle-up" : "fa-solid fa-angle-down"} transition-all duration-300`}></i>
-                  <p className='text-[18px] font-bold text-[#4E4E55]'>Conexiones de canales y plataformas</p>
-                </div>
-
-                <div className='flex flex-col gap-2'>
-                  <button onClick={() => setIndex(7)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Conexión entre plataformas</button>
-                  <button onClick={() => setIndex(8)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Conexión entre Kommo y N8N</button>
-                  <button onClick={() => setIndex(9)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Copias de seguridad</button>
-                  <button onClick={() => setIndex(10)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Primerso pasos, pruebas y errores frecuentes</button>
-                  <button onClick={() => setIndex(11)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Pruebas de funcionamiento en N8N</button>
-                  <button onClick={() => setIndex(12)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Conecta el agente a OpenAI</button>
-                  <button onClick={() => setIndex(13)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Conexiones con Google</button>
-                  <button onClick={() => setIndex(14)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Conexión con base de datos en Supabase</button>
-                </div>
-              </div>
-
-
-
-              <div className={` flex flex-col p-2 border border-black ${show5 ? "h-[240px]" : "h-[42px]"} overflow-hidden transition-all duration-400`}>
-                <div className='flex flex-row mb-2 items-center gap-2 hover:text-blue-500 cursor-pointer' onClick={() => setShow5(!show5)}>
-                  <i className={`${show5 ? "fa-solid fa-angle-up" : "fa-solid fa-angle-down"} transition-all duration-300`}></i>
-                  <p className='text-[18px] font-bold text-[#4E4E55]'>Comportamiento y gestión del agente de IA</p>
-                </div>
-
-                <div className='flex flex-col gap-2'>
-                  <button onClick={() => setIndex(15)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Costos</button>
-                  <button onClick={() => setIndex(16)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Movimiento de columna automático dentro del CRM</button>
-                  <button onClick={() => setIndex(17)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Transcripción de audio a texto</button>
-                  <button onClick={() => setIndex(18)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Reset de memoria</button>
-                  <button onClick={() => setIndex(19)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Que tu agente pueda rebatir objeciones</button>
-                </div>
-              </div>
-
-
-
-              <div className={` flex flex-col p-2 border border-black ${show6 ? "h-[310px]" : "h-[42px]"} overflow-hidden transition-all duration-400`}>
-                <div className='flex flex-row mb-2 items-center gap-2 hover:text-blue-500 cursor-pointer' onClick={() => setShow6(!show6)}>
-                  <i className={`${show6 ? "fa-solid fa-angle-up" : "fa-solid fa-angle-down"} transition-all duration-300`}></i>
-                  <p className='text-[18px] font-bold text-[#4E4E55]'>Funciones principales del agente de IA</p>
-                </div>
-
-                <div className='flex flex-col gap-2'>
-                  <button onClick={() => setIndex(20)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Sheets como base de datos de productos</button>
-                  <button onClick={() => setIndex(21)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Cómo crear y gestionar bases de datos vectorial (RAG)</button>
-                  <button onClick={() => setIndex(22)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Agendamiento automático de citas en Google Calendar</button>
-                  <button onClick={() => setIndex(23)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Categorizador automático</button>
-                  <button onClick={() => setIndex(24)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Envío de imágenes y videos</button>
-                  <button onClick={() => setIndex(25)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Cómo hacer para que el agente reconozca imágenes</button>
-                  <button onClick={() => setIndex(26)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Instalación de Postgres para memoria a largo plazo</button>
-                </div>
-              </div>
-
-
-
-              <div className={` flex flex-col p-2 border border-black ${show7 ? "h-[140px]" : "h-[42px]"} overflow-hidden transition-all duration-400`}>
-                <div className='flex flex-row mb-2 items-center gap-2 hover:text-blue-500 cursor-pointer' onClick={() => setShow7(!show7)}>
-                  <i className={`${show7 ? "fa-solid fa-angle-up" : "fa-solid fa-angle-down"} transition-all duration-300`}></i>
-                  <p className='text-[18px] font-bold text-[#4E4E55]'>Automatización del proceso comercial</p>
-                </div>
-
-                <div className='flex flex-col gap-2'>
-                  <button onClick={() => setIndex(27)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Seguimientos automáticos</button>
-                  <button onClick={() => setIndex(28)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Agentes diferenciados para cada canal de comunicación</button>
-                </div>
-              </div>
-
-
-
-
-              <div className={` flex flex-col p-2 border border-black ${show8 ? "h-[260px]" : "h-[42px]"} overflow-hidden transition-all duration-400`}>
-                <div className='flex flex-row mb-2 items-center gap-2 hover:text-blue-500 cursor-pointer' onClick={() => setShow8(!show8)}>
-                  <i className={`${show8 ? "fa-solid fa-angle-up" : "fa-solid fa-angle-down"} transition-all duration-300`}></i>
-                  <p className='text-[18px] font-bold text-[#4E4E55]'>Actualizaciones</p>
-                </div>
-
-                <div className='flex flex-col gap-2'>
-                  <button onClick={() => setIndex(29)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Cómo crear buffer de mensajes para evitar múltiples respuestas</button>
-                  <button onClick={() => setIndex(30)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Cómo verificar superposición para agendamientos de citas</button>
-                  <button onClick={() => setIndex(31)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Sistemas multiagentes de IA (flujo descargable)</button>
-                  <button onClick={() => setIndex(32)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Analista de sentimientos</button>
-                  <button onClick={() => setIndex(33)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Cambios en N8N 2.0</button>
-                </div>
-              </div>
-
-
-
-
-              <div className={` flex flex-col p-2 border border-black ${show9 ? "h-[200px]" : "h-[42px]"} overflow-hidden transition-all duration-400`}>
-                <div className='flex flex-row mb-2 items-center gap-2 hover:text-blue-500 cursor-pointer' onClick={() => setShow9(!show9)}>
-                  <i className={`${show9 ? "fa-solid fa-angle-up" : "fa-solid fa-angle-down"} transition-all duration-300`}></i>
-                  <p className='text-[18px] font-bold text-[#4E4E55]'>Dudas frecuentes de alumnos</p>
-                </div>
-
-                <div className='flex flex-col gap-2'>
-                  <button onClick={() => setIndex(34)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Instancia de N8N con problemas de acceso en VPS</button>
-                  <button onClick={() => setIndex(35)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Error en calisificador de texto</button>
-                  <button onClick={() => setIndex(36)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Personaliozación de mensajes</button>
-                  <button onClick={() => setIndex(37)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Error en nodo Get Token</button>
-                </div>
-              </div>
-
-
-
-
-              <div className={` flex flex-col p-2 border border-black ${show10 ? "h-[190px]" : "h-[42px]"} overflow-hidden transition-all duration-400`}>
-                <div className='flex flex-row mb-2 items-center gap-2 hover:text-blue-500 cursor-pointer' onClick={() => setShow10(!show10)}>
-                  <i className={`${show10 ? "fa-solid fa-angle-up" : "fa-solid fa-angle-down"} transition-all duration-300`}></i>
-                  <p className='text-[18px] font-bold text-[#4E4E55]'>Bonus</p>
-                </div>
-
-                <div className='flex flex-col gap-2'>
-                  <button onClick={() => setIndex(38)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Cómo crear una request desde la documentación de Kommo - Disparo de bot (clase avanzada)</button>
-                  <button onClick={() => setIndex(39)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>MVP flujo base para ofrecer consultorías (flujo descargable)</button>
-                  <button onClick={() => setIndex(40)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Derivación automática para cada asesor comercial</button>
-                </div>
-              </div>
-
-
+            <div className=' flex flex-col items-center justify-center gap-2 my-4'>
+              <img src={Logo} className='w-[100px] h-[100px] object-cover rounded-full' alt="" />
+              <p className='text-[25px] font-bold text-[#4E4E55]'>León Group</p>
             </div>
-            {/* ----------------------------------------------------------- GRUPOS DE LINKS ------------------------------------------------------- */}
 
 
+            <div className='h-[78%] overflow-y-auto'>
+              {/* ----------------------------------------------------------- GRUPOS DE LINKS ------------------------------------------------------- */}
+              <div className=' p-4 flex flex-col gap-2 rounded-lg'>
+
+
+
+                <div className={`bg-[#F7FEE7] rounded-lg border border-[#D6D3D1] p-2 ${show1 ? "h-[80px]" : "h-[42px]"} overflow-hidden transition-all duration-400`}>
+                  <div className='flex flex-row mb-2 items-center gap-2 hover:text-blue-500 cursor-pointer' onClick={() => setShow1(!show1)}>
+                    <i className={`${show1 ? "fa-solid fa-angle-up" : "fa-solid fa-angle-down"} transition-all duration-300`}></i>
+                    <p className='text-[18px] font-bold text-[#4E4E55] hover:text-blue-500'>Inicio</p>
+                  </div>
+                  <button onClick={() => setIndex(0)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Presentación</button>
+                </div>
+
+
+                <div className={`bg-[#F7FEE7] rounded-lg border border-[#D6D3D1] p-2 flex flex-col ${show2 ? "h-[190px]" : "h-[42px]"} overflow-hidden transition-all duration-400`}>
+                  <div className='flex flex-row mb-2 items-center gap-2 hover:text-blue-500 cursor-pointer' onClick={() => setShow2(!show2)}>
+                    <i className={`${show2 ? "fa-solid fa-angle-up" : "fa-solid fa-angle-down"} transition-all duration-300`}></i>
+                    <p className='text-[18px] font-bold text-[#4E4E55] hover:text-blue-500'>Implementa Kommo en tu sistema comercial</p>
+                  </div>
+
+                  <div className='flex flex-col gap-2'>
+                    <button onClick={() => setIndex(1)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Creación de la cuenta de Kommo</button>
+                    <button onClick={() => setIndex(2)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Conexión de canles de venta en Kommo</button>
+                    <button onClick={() => setIndex(3)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Guia de WhatsApp API</button>
+                    <button onClick={() => setIndex(4)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Cómo conectar WhatsApp Lite en Kommo (QR)</button>
+                  </div>
+                </div>
+
+
+                <div className={`bg-[#F7FEE7] rounded-lg border border-[#D6D3D1] flex flex-col p-2 ${show3 ? "h-[140px]" : "h-[42px]"} overflow-hidden transition-all duration-400`}>
+                  <div className='flex flex-row mb-2 items-center gap-2 hover:text-blue-500 cursor-pointer' onClick={() => setShow3(!show3)}>
+                    <i className={`${show3 ? "fa-solid fa-angle-up" : "fa-solid fa-angle-down"} transition-all duration-300`}></i>
+                    <p className='text-[18px] font-bold text-[#4E4E55] hover:text-blue-500'>Implementa N8N en tu sistema comercial</p>
+                  </div>
+
+                  <div className='flex flex-col gap-2'>
+                    <button onClick={() => setIndex(5)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Creación de usuario y breve recorrido de N8N</button>
+                    <button onClick={() => setIndex(6)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Cómo montar N8N en un servidor VPS propio</button>
+                  </div>
+                </div>
+
+
+
+                <div className={`bg-[#F7FEE7] rounded-lg border border-[#D6D3D1] flex flex-col p-2 ${show4 ? "h-[340px]" : "h-[42px]"} overflow-hidden transition-all duration-400`}>
+                  <div className='flex flex-row mb-2 items-center gap-2 hover:text-blue-500 cursor-pointer' onClick={() => setShow4(!show4)}>
+                    <i className={`${show4 ? "fa-solid fa-angle-up" : "fa-solid fa-angle-down"} transition-all duration-300`}></i>
+                    <p className='text-[18px] font-bold text-[#4E4E55] hover:text-blue-500'>Conexiones de canales y plataformas</p>
+                  </div>
+
+                  <div className='flex flex-col gap-2'>
+                    <button onClick={() => setIndex(7)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Conexión entre plataformas</button>
+                    <button onClick={() => setIndex(8)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Conexión entre Kommo y N8N</button>
+                    <button onClick={() => setIndex(9)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Copias de seguridad</button>
+                    <button onClick={() => setIndex(10)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Primerso pasos, pruebas y errores frecuentes</button>
+                    <button onClick={() => setIndex(11)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Pruebas de funcionamiento en N8N</button>
+                    <button onClick={() => setIndex(12)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Conecta el agente a OpenAI</button>
+                    <button onClick={() => setIndex(13)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Conexiones con Google</button>
+                    <button onClick={() => setIndex(14)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Conexión con base de datos en Supabase</button>
+                  </div>
+                </div>
+
+
+
+                <div className={`bg-[#F7FEE7] rounded-lg border border-[#D6D3D1] flex flex-col p-2 ${show5 ? "h-[240px]" : "h-[42px]"} overflow-hidden transition-all duration-400`}>
+                  <div className='flex flex-row mb-2 items-center gap-2 hover:text-blue-500 cursor-pointer' onClick={() => setShow5(!show5)}>
+                    <i className={`${show5 ? "fa-solid fa-angle-up" : "fa-solid fa-angle-down"} transition-all duration-300`}></i>
+                    <p className='text-[18px] font-bold text-[#4E4E55] hover:text-blue-500'>Comportamiento y gestión del agente de IA</p>
+                  </div>
+
+                  <div className='flex flex-col gap-2'>
+                    <button onClick={() => setIndex(15)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Costos</button>
+                    <button onClick={() => setIndex(16)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Movimiento de columna automático dentro del CRM</button>
+                    <button onClick={() => setIndex(17)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Transcripción de audio a texto</button>
+                    <button onClick={() => setIndex(18)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Reset de memoria</button>
+                    <button onClick={() => setIndex(19)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Que tu agente pueda rebatir objeciones</button>
+                  </div>
+                </div>
+
+
+
+                <div className={`bg-[#F7FEE7] rounded-lg border border-[#D6D3D1] flex flex-col p-2 ${show6 ? "h-[310px]" : "h-[42px]"} overflow-hidden transition-all duration-400`}>
+                  <div className='flex flex-row mb-2 items-center gap-2 hover:text-blue-500 cursor-pointer' onClick={() => setShow6(!show6)}>
+                    <i className={`${show6 ? "fa-solid fa-angle-up" : "fa-solid fa-angle-down"} transition-all duration-300`}></i>
+                    <p className='text-[18px] font-bold text-[#4E4E55] hover:text-blue-500'>Funciones principales del agente de IA</p>
+                  </div>
+
+                  <div className='flex flex-col gap-2'>
+                    <button onClick={() => setIndex(20)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Sheets como base de datos de productos</button>
+                    <button onClick={() => setIndex(21)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Cómo crear y gestionar bases de datos vectorial (RAG)</button>
+                    <button onClick={() => setIndex(22)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Agendamiento automático de citas en Google Calendar</button>
+                    <button onClick={() => setIndex(23)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Categorizador automático</button>
+                    <button onClick={() => setIndex(24)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Envío de imágenes y videos</button>
+                    <button onClick={() => setIndex(25)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Cómo hacer para que el agente reconozca imágenes</button>
+                    <button onClick={() => setIndex(26)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Instalación de Postgres para memoria a largo plazo</button>
+                  </div>
+                </div>
+
+
+
+                <div className={`bg-[#F7FEE7] rounded-lg border border-[#D6D3D1] flex flex-col p-2 ${show7 ? "h-[140px]" : "h-[42px]"} overflow-hidden transition-all duration-400`}>
+                  <div className='flex flex-row mb-2 items-center gap-2 hover:text-blue-500 cursor-pointer' onClick={() => setShow7(!show7)}>
+                    <i className={`${show7 ? "fa-solid fa-angle-up" : "fa-solid fa-angle-down"} transition-all duration-300`}></i>
+                    <p className='text-[18px] font-bold text-[#4E4E55] hover:text-blue-500'>Automatización del proceso comercial</p>
+                  </div>
+
+                  <div className='flex flex-col gap-2'>
+                    <button onClick={() => setIndex(27)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Seguimientos automáticos</button>
+                    <button onClick={() => setIndex(28)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Agentes diferenciados para cada canal de comunicación</button>
+                  </div>
+                </div>
+
+
+
+
+                <div className={`bg-[#F7FEE7] rounded-lg border border-[#D6D3D1] flex flex-col p-2 ${show8 ? "h-[280px]" : "h-[42px]"} overflow-hidden transition-all duration-400`}>
+                  <div className='flex flex-row mb-2 items-center gap-2 hover:text-blue-500 cursor-pointer' onClick={() => setShow8(!show8)}>
+                    <i className={`${show8 ? "fa-solid fa-angle-up" : "fa-solid fa-angle-down"} transition-all duration-300`}></i>
+                    <p className='text-[18px] font-bold text-[#4E4E55] hover:text-blue-500'>Actualizaciones</p>
+                  </div>
+
+                  <div className='flex flex-col gap-2'>
+                    <button onClick={() => setIndex(29)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Cómo crear buffer de mensajes para evitar múltiples respuestas</button>
+                    <button onClick={() => setIndex(30)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Cómo verificar superposición para agendamientos de citas</button>
+                    <button onClick={() => setIndex(31)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Sistemas multiagentes de IA (flujo descargable)</button>
+                    <button onClick={() => setIndex(32)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Analista de sentimientos</button>
+                    <button onClick={() => setIndex(33)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Cambios en N8N 2.0</button>
+                  </div>
+                </div>
+
+
+
+
+                <div className={`bg-[#F7FEE7] rounded-lg border border-[#D6D3D1] flex flex-col p-2 ${show9 ? "h-[200px]" : "h-[42px]"} overflow-hidden transition-all duration-400`}>
+                  <div className='flex flex-row mb-2 items-center gap-2 hover:text-blue-500 cursor-pointer' onClick={() => setShow9(!show9)}>
+                    <i className={`${show9 ? "fa-solid fa-angle-up" : "fa-solid fa-angle-down"} transition-all duration-300`}></i>
+                    <p className='text-[18px] font-bold text-[#4E4E55] hover:text-blue-500'>Dudas frecuentes de alumnos</p>
+                  </div>
+
+                  <div className='flex flex-col gap-2'>
+                    <button onClick={() => setIndex(34)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Instancia de N8N con problemas de acceso en VPS</button>
+                    <button onClick={() => setIndex(35)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Error en clasificador de texto</button>
+                    <button onClick={() => setIndex(36)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Personalización de mensajes</button>
+                    <button onClick={() => setIndex(37)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Error en nodo Get Token</button>
+                  </div>
+                </div>
+
+
+
+
+                <div className={`bg-[#F7FEE7] rounded-lg border border-[#D6D3D1] flex flex-col p-2 ${show10 ? "h-[210px]" : "h-[42px]"} overflow-hidden transition-all duration-400`}>
+                  <div className='flex flex-row mb-2 items-center gap-2 hover:text-blue-500 cursor-pointer' onClick={() => setShow10(!show10)}>
+                    <i className={`${show10 ? "fa-solid fa-angle-up" : "fa-solid fa-angle-down"} transition-all duration-300`}></i>
+                    <p className='text-[18px] font-bold text-[#4E4E55] hover:text-blue-500'>Bonus</p>
+                  </div>
+
+                  <div className='flex flex-col gap-2'>
+                    <button onClick={() => setIndex(38)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Cómo crear una request desde la documentación de Kommo - Disparo de bot (clase avanzada)</button>
+                    <button onClick={() => setIndex(39)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>MVP flujo base para ofrecer consultorías (flujo descargable)</button>
+                    <button onClick={() => setIndex(40)} className='text-lg text-[#4E4E55] font-semibold ml-7 hover:text-blue-500 cursor-pointer text-start'>Derivación automática para cada asesor comercial</button>
+                  </div>
+                </div>
+
+
+              </div>
+              {/* ----------------------------------------------------------- GRUPOS DE LINKS ------------------------------------------------------- */}
+            </div>
 
 
           </div>
 
-          <div id='contenido' className='mb-[80px] border border-black w-[65%] rounded-lg bg-white p-4 flex flex-col gap-2 justify-center items-center'>
+          <div id='contenido' className='mb-[80px] border border-[#D6D3D1] shadow-sm w-[65%] rounded-lg bg-white p-4 flex flex-col gap-2 justify-center items-center'>
             <h1 className='text-center text-[30px] font-semibold text-[#4E4E55]'>{data[index].titulo}</h1>
             <iframe className={`${data[index].link ? "block" : "hidden"}`} width="90%" height="600" src={`${data[index].link}`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             <iframe className={`${data[index].link2 ? "block" : "hidden"}`} width="90%" height="600" src={`${data[index].link2}`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
