@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 
 export default function Login() {
 
-    const EMNAIL = "admin@admin.com";
-    const PASSWORD = "123456";
+    const EMNAIL = "grupo4@leongroup.com";
+    const PASSWORD = "leongroup4access";
 
     const [showPassword, setShowPassword] = useState(false);
     const [email, setEmail] = useState("");
