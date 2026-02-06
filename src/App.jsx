@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Uno from './assets/1Curso.jpg'
 import Dos from './assets/2Curso.jpg'
 import Tres from './assets/3Curso.jpg'
@@ -6,6 +6,7 @@ import Cuatro from './assets/4Curso.jpg'
 import Cinco from './assets/5Curso.jpg'
 import Seis from './assets/6Curso.png'
 import Logo from './assets/logo.png'
+import Login from './components/Login'
 
 
 
@@ -22,6 +23,20 @@ function App() {
   const [show8, setShow8] = useState(false)
   const [show9, setShow9] = useState(false)
   const [show10, setShow10] = useState(false)
+
+  const sesionObject = JSON.parse(localStorage.getItem("sesion"))
+  const [showLogin, setShowLogin] = useState(true)
+
+  useEffect(() => {
+    console.log(sesionObject);
+    if (sesionObject !== null) {
+      setShowLogin(false)
+      console.log("Entra aca?");
+    } else {
+      setShowLogin(true)
+      console.log("No entra aca?");
+    }
+  }, [])
 
   const [data, setData] = useState([
     {
@@ -150,7 +165,7 @@ function App() {
       descripcion: <><p>En este video te explicamos cómo conectar las diferentes plataformas entre sí para que puedan comunicarse entre ellas.</p></>
     },
     {
-      titulo: "Conexión entre Kommo y N8N", link: "https://res.cloudinary.com/dlyoighih/video/upload/v1747970285/samples/elephants.mp4",
+      titulo: "Conexión entre Kommo y N8N", link: "https://www.youtube.com/embed/jwSsxN2VW_U?si=mwmslnId8TpPcG5u",
       descripcion: <>
         <p>En esta clase vamos a conectar Kommo con n8n para que todo el sistema quede integrado. Te vamos a proporcionar un archivo JSON preconfigurado con el flujo de automatización, que podrás descargar e importar directamente en tu cuenta de n8n.<br />
 
@@ -586,17 +601,26 @@ function App() {
 
   ])
 
+
+
   const [index, setIndex] = useState(0)
 
   return (
     <>
       <div className=' w-full min-h-screen bg-[#F2F2F3]'>
+
+
+        <Login />
+
+        <div className='w-full flex justify-end p-4'>
+          <button onClick={() => {localStorage.clear(); window.location.reload();}} className='bg-red-500 text-white px-4 py-2 rounded-lg cursor-pointer'>Log out</button>
+        </div>
         <h1 className='text-[45px] text-[#4E4E55] my-6 font-bold text-center'>
           Automatización de ventas
         </h1>
 
 
-        <div id='navMasContenido' className='flex flex-row justify-around'>
+        <div id='navMasContenido' className={` ${showLogin ? "hidden" : ""} flex flex-row justify-around`}>
 
           <div id='nav' className='bg-white relative border border-[#D6D3D1] shadow-sm sticky top-10 w-[30%] h-[85vh] py-3 rounded-lg'>
 
